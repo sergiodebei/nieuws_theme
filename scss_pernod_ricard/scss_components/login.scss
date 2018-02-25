@@ -1,0 +1,110 @@
+#av-overlay-wrap { 
+	position: fixed; 
+    height: 100vh;
+    width: 100%;
+	z-index: 10000;
+	display: block;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right:0;
+	background-color: #7FA5D0;  
+	// background: url("./img/login_background.jpg");
+	// background-size: cover;
+	// background-repeat: no-repeat;
+}
+
+#av-overlay {
+	// position: fixed; 
+	// top: 0;
+	// left: 0;
+	// height: 100%;
+	// width: 100%;
+	@include transition (.3s);
+	background: rgba(255,255,255,0.5);
+	border-radius: 5px;
+	z-index: 10001;
+	padding: 30px;
+	box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	position: relative;
+	// top: auto;
+	// left: auto;
+	width: 50%;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+#av-overlay h1 {
+	margin-bottom: 20px;
+	font: 400 20px/25px Roboto;
+}
+#av-overlay p {
+	margin-bottom: 10px;
+}
+#av-overlay .submit {
+	margin-bottom: 0;
+	display: flex; 
+	justify-content: center;
+	flex-direction: column;
+	margin: auto; 
+}
+
+#av-overlay input[type=text] {
+	width: 50px;
+	outline: none;
+	border: none;
+	padding: 10px;
+	text-align: center;
+}
+#av-overlay input[type=submit] {
+    // width: 50%;
+    margin: auto;
+	display: block;
+	padding: 10px 25px;
+	text-transform: uppercase;
+	margin-top: 10px;
+	height: auto;
+	font-size: 10px;
+	font-weight: bold;
+	letter-spacing: .2em;
+	color: $blue;
+	border: 1px solid $blue;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	line-height: normal;
+	@include transition (.3s);
+	background-color: $blue;
+	color: $white; 
+	&:hover, &:focus{
+	    background-color: $white;
+	    color: $blue; 
+	}
+}
+
+#av-overlay #av_verify_y {
+	width: 70px;
+}
+
+#av-overlay .error {
+	padding: 10px;
+	border: 1px solid tomato;
+    display: inline-block;
+    background-color: white;
+}
+
+@media only screen and (max-width: 600px) {
+	#av-overlay{
+		width: calc(100% - 30px);
+	}
+
+
+
+}
